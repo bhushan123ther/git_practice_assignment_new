@@ -1,9 +1,20 @@
 function checkPrime(num){
-   for(let i=i; i<=num; i++){
-       if(num % i){
-         return true;
+   let counter = 0;
+   for(let i=1; i<=num; i++){
+       if(num % i == 0){
+          counter++;
       }
    }
+   if(counter == 2){
+      return true;
+   } 
    return false;
 }
-checkPrime(13);
+
+let ans = checkPrime(13);
+if(ans == true){
+   console.log("Prime No");
+}
+else{
+   console.log("Not Prime No");
+}
